@@ -12,16 +12,34 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 0; /* Add a small padding to the left */
-  background: linear-gradient(-45deg, #33ff77, #66ccff, #668cff, #a166ff, #8533ff, #ff6685, #ffc966, #a166ff);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  /*background: linear-gradient(-45deg, #33ff77, #66ccff, #668cff, #a166ff, #8533ff, #ff6685, #ffc966, #a166ff);*/
+  /*background: linear-gradient(-45deg, #684eb3, #d47acf, #2d1544, #262370, #4e266f, #a56ad4, #77caf8, #8179eb, #482288, #767dd9);*/
+  background: linear-gradient(-45deg, 
+  #2d1544 0%, /* Deep purple */
+  #003f6c 10%, /* Midnight blue */
+  #1e3a6c 20%, /* Cyberpunk blue */
+  #003b5c 30%, /* Dark teal */
+  #00aaff 45%, /* Bright cyan */
+  #00d1e0 60%, /* Electric blue */
+  #6f42c1 75%, /* Violet */
+  #ff007f 100% /* Neon pink */
+ );
+  /*#7c6fea, #5853c8, #342b6e, #2d2249, #493672, #2a1780, #6a5ee8, #6b85f0, #3c57f4, #3032a8*/
+  background-size: 200% 200%; /* Adjust background size for smoother transitions */
+  animation: gradientBackground 15s ease infinite; /* Smooth animation */
   display: flex;
   flex-direction: column;
-  /*align-items: left;*/
   min-height: 100vh;
 }
 
 /* Gradient background animation */
+@keyframes gradientBackground {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Gradient background animation
 @keyframes gradientBackground {
   0% { background-position: 0% 50%; }
   20% { background-position: 50% 50%; }
@@ -29,28 +47,34 @@ body {
   60% { background-position: 50% 50%; }
   80% { background-position: 0% 50%; }
   100% { background-position: 0% 50%; }
-}
+}*/
 
 /* Navbar styling */
 .navbar {
   width: 100%;
-  height: 40px;
-  background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+  /*background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #333;*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #1e3a6c; /* Deep cyberpunk blue */
+  color: #ffffff; /* White text for readability */
+}
+
+.navbar .navbar-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 40px; /* Set a fixed height for the navbar */
 }
 
 .navbar a {
   text-decoration: none;
-  color: #333;
-  margin: 0 10px;
+  color: #00d1e0;
+  margin: 0 15px; /* Increase margin for better spacing */
 }
 
 .navbar a:hover {
-  color: #555;
+  color: #ff007f;
 }
 
 /* Container styling */
@@ -101,8 +125,8 @@ body {
 /* Footer styling */
 .footer {
   width: 100%;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px; /* Increased padding for a more spacious look */
+  background-color: #2d1544; /* Deep purple to match the navbar */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -111,11 +135,56 @@ body {
 }
 
 .footer a {
-  color: #fff;
+  color: #00d1e0; /* Electric blue to match the navbar link color */
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px; /* Increased margin for better spacing */
 }
 
 .footer a:hover {
   text-decoration: underline;
+  color: #ff007f; /* Neon pink on hover to tie in with the navbar hover color */
+}
+
+.static-white-text {
+  color: #e0e0e0; /* White color for text */
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.static-white-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: -1;
+}
+.static-white-text h1 {
+  font-size: 2rem; /* Adjusted font size for balance */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #fff; /* Ensure heading color contrasts well with the background */
+}
+
+.static-white-text p {
+  margin-bottom: 20px; /* Increased spacing between paragraphs */
+  color: #e0e0e0; /* White color for paragraphs to match overall theme */
+}
+
+.static-white-text a {
+  color: #00d1e0; /* Electric blue for links to match the navbar */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold weight for links for emphasis */
+}
+
+.static-white-text a:hover {
+  color: #ff007f; /* Neon pink on hover for contrast */
+  text-decoration: underline; /* Add underline on hover for emphasis */
 }
