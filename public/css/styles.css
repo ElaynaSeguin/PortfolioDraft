@@ -91,42 +91,46 @@ body {
   overflow-y: auto;
 }
 
-/* Main heading styling */
+/* Intro section styling */
 .intro-section {
-  max-width: 75%; /* Adjust as per your design */
-  margin-right: auto; /* Align to the left by setting right margin to auto */
-  margin-left: 0; /* Set left margin to 0 */
-  padding: 0; /* Add padding for spacing */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between text and image */
+  align-items: flex-start; /* Align items at the start */
+  max-width: 100%; /* Full width */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Add padding for spacing */
+  flex-wrap: nowrap; /* No wrapping to keep columns side by side */
 }
 
 /* Intro text styling */
 .intro-text {
-  text-align: left; /* Left align text */
-  margin-left: 0; /* Remove left margin */
-  padding-left: 100px; /* Add a small padding to the left */
+  flex: 2; /* Allow text to take 2/3 of the space */
+  margin-right: 20px; /* Space between text and image */
+  padding: 0; /* Remove padding */
 }
 
 .intro-text h1 {
   font-size: 6rem; /* Adjust font size */
   color: #fff; /* Text color */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional text shadow for better visibility */
-  text-align: left; /* Left align text */
 }
 
 /* Intro image container */
 .intro-image {
-  position: absolute; /* Position the image absolutely */
-  top: 50px; /* Adjust top position */
-  right: 500px; /* Adjust right position */
-  max-width: 300px; /* Adjust max width for responsiveness */
+  flex: 1; /* Fixed width for the image container (1/3 of the space) */
+  display: flex; /* Use flexbox for the image container */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  margin-top: 0px; /* Add top margin for spacing */
 }
 
 /* Right-centered image */
 .right-centered-img {
-  max-width: 250%; /* Ensure image doesn't exceed its container */
+  width: 100%;
+  max-width: none; /* Ensure image doesn't exceed its container */
   height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure the image behaves correctly */
-  margin: 0 auto; /* Center align horizontally */
+  /*display: block; /* Ensure the image behaves correctly */
+ /* margin: 0 auto; /* Center align horizontally */
 }
 
 /* Footer styling */
@@ -263,4 +267,67 @@ body {
 .static-white-text-left a:hover {
   color: #ff007f; /* Neon pink on hover for contrast */
   text-decoration: underline; /* Add underline on hover for emphasis */
+}
+
+/* Home container styling */
+.home-container {
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+  /*display: static;
+  overflow: auto;*/
+  display: flex;
+  overflow: hidden;
+}
+
+/* Intro section styling */
+.home-container .intro-section {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between text and image */
+  align-items: flex-start; /* Align items at the start */
+  max-width: 100%; /* Full width */
+  margin: 0 auto; /* Center the section */
+  padding: 0; /* Remove padding for spacing */
+  flex-wrap: nowrap; /* No wrapping to keep columns side by side */
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Intro text styling */
+.home-container .intro-text {
+  flex: 2; /* Allow text to take 2/3 of the space */
+  margin: 0; /* Remove all margins */
+  padding: 50px; /* Remove padding */
+  margin-top: 150px;
+  overflow: hidden;
+}
+
+/* Intro text heading styling */
+.home-container .intro-text h1 {
+  font-size: 6rem; /* Adjust font size */
+  color: #fff; /* Text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional text shadow for better visibility */
+  margin: 0; /* Ensure no margin */
+}
+
+/* Intro image container */
+.home-container .intro-image {
+  flex: 1; /* Fixed width for the image container (1/3 of the space) */
+  display: flex; /* Use flexbox for the image container */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+  overflow:auto;
+  height: 100vh;
+
+}
+
+/* Right-centered image */
+.home-container .right-centered-img {
+  width: 100%;
+  max-width: none; /* Ensure image doesn't exceed its container */
+  /*height: center; /* Maintain aspect ratio */
+  height: 100%;
+  object-fit: cover;
 }
