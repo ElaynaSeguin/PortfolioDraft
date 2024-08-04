@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build and deploy
+      run: |
+        mkdir public
+        mv * public
+        touch public/.nojekyll
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add -A
+        git commit -m 'Deploy to GitHub Pages'
+        git push --force origin `git subtree split --prefix public main`:gh-pages
