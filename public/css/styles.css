@@ -1,45 +1,45 @@
 /* public/css/styles.css */
 
-/* Reset some basic elements */
+/* -- BODY SETUP -- */
 body, h1, p {
   margin: 0;
   padding: 0;
 }
 
-/* Body styling */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  padding-left: 0; /* Add a small padding to the left */
+  padding-left: 0;
+  /*Alternative background styles*/
   /*background: linear-gradient(-45deg, #33ff77, #66ccff, #668cff, #a166ff, #8533ff, #ff6685, #ffc966, #a166ff);*/
   /*background: linear-gradient(-45deg, #684eb3, #d47acf, #2d1544, #262370, #4e266f, #a56ad4, #77caf8, #8179eb, #482288, #767dd9);*/
-  background: linear-gradient(-45deg, 
-  #2d1544 0%, /* Deep purple */
-  #003f6c 10%, /* Midnight blue */
-  #1e3a6c 20%, /* Cyberpunk blue */
-  #003b5c 30%, /* Dark teal */
-  #00aaff 45%, /* Bright cyan */
-  #00d1e0 60%, /* Electric blue */
-  #6f42c1 75%, /* Violet */
-  #ff007f 100% /* Neon pink */
- );
   /*#7c6fea, #5853c8, #342b6e, #2d2249, #493672, #2a1780, #6a5ee8, #6b85f0, #3c57f4, #3032a8*/
-  background-size: 200% 200%; /* Adjust background size for smoother transitions */
-  animation: gradientBackground 15s ease infinite; /* Smooth animation */
+  background: linear-gradient(-45deg, 
+  #2d1544 0%,
+  #003f6c 10%, 
+  #1e3a6c 20%, 
+  #003b5c 30%, 
+  #00aaff 45%, 
+  #00d1e0 60%,
+  #6f42c1 75%, 
+  #ff007f 100% 
+ );
+
+  background-size: 200% 200%;
+  animation: gradientBackground 15s ease infinite;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Gradient background animation */
 @keyframes gradientBackground {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
   100% { background-position: 0% 0%; }
 }
 
-/* Gradient background animation
+/* previous gradient background animation
 @keyframes gradientBackground {
   0% { background-position: 0% 50%; }
   20% { background-position: 50% 50%; }
@@ -49,15 +49,12 @@ body {
   100% { background-position: 0% 50%; }
 }*/
 
-/* Navbar styling */
+/* -- NAVBAR SETUP -- */
 .navbar {
   width: 100%;
-  /*background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #333;*/
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #1e3a6c; /* Deep cyberpunk blue */
-  color: #ffffff; /* White text for readability */
+  background-color: #1e3a6c; 
+  color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -66,78 +63,76 @@ body {
 }
 
 .navbar .navbar-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 40px; /* Set a fixed height for the navbar */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
 .navbar a {
   text-decoration: none;
   color: #00d1e0;
-  margin: 0 15px; /* Increase margin for better spacing */
+  margin: 0 15px;
 }
 
 .navbar a:hover {
   color: #ff007f;
 }
 
-/* Container styling */
+/* -- CONTAINER SETUP -- */
 .container {
-  margin-top: 20vh; /* Adjust top margin for positioning */
-  position: relative; /* Ensure container is positioned relative */
-  padding-left: 0; /* Ensure no padding on the left */
+  margin-top: 20vh; 
+  position: relative; 
+  padding-left: 0; 
   flex: 1;
   overflow-y: auto;
 }
 
-/* Intro section styling */
+/* -- INTRO SECTION SETUP -- */
 .intro-section {
-  display: flex; /* Use flexbox layout */
-  justify-content: space-between; /* Space between text and image */
-  align-items: flex-start; /* Align items at the start */
-  max-width: 100%; /* Full width */
-  margin: 0 auto; /* Center the section */
-  padding: 20px; /* Add padding for spacing */
-  flex-wrap: nowrap; /* No wrapping to keep columns side by side */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start;
+  max-width: 100%; 
+  margin: 0 auto; 
+  padding: 20px; 
+  flex-wrap: nowrap; 
 }
 
-/* Intro text styling */
+/* -- SCRIPTING TEXT SETUP -- */
 .intro-text {
-  flex: 2; /* Allow text to take 2/3 of the space */
-  margin-right: 20px; /* Space between text and image */
-  padding: 0; /* Remove padding */
+  flex: 2; /*2/3 screen space*/
+  margin-right: 20px;
+  padding: 0;
 }
 
 .intro-text h1 {
-  font-size: 6rem; /* Adjust font size */
-  color: #fff; /* Text color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional text shadow for better visibility */
+  font-size: 6rem; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
-/* Intro image container */
+/* -- HOME IMAGE SETUP -- */
 .intro-image {
-  flex: 1; /* Fixed width for the image container (1/3 of the space) */
-  display: flex; /* Use flexbox for the image container */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-  margin-top: 0px; /* Add top margin for spacing */
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
 }
 
 /* Right-centered image */
 .right-centered-img {
   width: 100%;
-  max-width: none; /* Ensure image doesn't exceed its container */
-  height: auto; /* Maintain aspect ratio */
-  /*display: block; /* Ensure the image behaves correctly */
- /* margin: 0 auto; /* Center align horizontally */
+  max-width: none; 
+  height: auto; 
 }
 
-/* Footer styling */
+/* -- FOOTER SETUP -- */
 .footer {
   width: 100%;
-  padding: 20px; /* Increased padding for a more spacious look */
-  background-color: #2d1544; /* Deep purple to match the navbar */
+  padding: 20px; 
+  background-color: #2d1544;
   position: relative;
   bottom: 0;
   left: 0;
@@ -147,26 +142,30 @@ body {
 }
 
 .footer a {
-  color: #00d1e0; /* Electric blue to match the navbar link color */
+  color: #00d1e0;
   text-decoration: none;
-  margin: 0 15px; /* Increased margin for better spacing */
+  margin: 0 15px;
 }
 
 .footer a:hover {
   text-decoration: underline;
-  color: #ff007f; /* Neon pink on hover to tie in with the navbar hover color */
+  color: #ff007f;
 }
 
+/* -- STATIC TEXT SETUP -- */
+/* Used on main pages*/
 .static-white-text {
-  color: #e0e0e0; /* White color for text */
+  color: #e0e0e0;
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 1.8;
   margin: 60px auto;
-  padding: 20px;
+  padding: 30px;
   width: 1000px;
   position: relative;
   z-index: 1;
+  margin-top: 50px;
+  
 }
 
 .static-white-text::before {
@@ -181,45 +180,48 @@ body {
 }
 
 .static-white-text h1 {
-  font-size: 2.5rem; /* Largest size for main heading */
-  margin-bottom: 20px; /* Space below the heading */
-  color: #fff; /* Ensure heading color contrasts well with the background */
+  font-size: 2.5rem;
+  margin-bottom: 20px; 
+  color: #fff;
 }
 
 .static-white-text h2 {
-  font-size: 2rem; /* Smaller than h1 but larger than h3 */
-  margin-bottom: 5px; /* Space below the heading */
-  margin-top: 15px; /* Reduced space above the heading */
-  color: #00d1e0; /* Ensure heading color contrasts well with the background */
+  font-size: 2rem; 
+  margin-bottom: 5px; 
+  margin-top: 15px; 
+  color: rgb(0, 209, 224);
+  text-shadow: 0 0 5px rgba(0, 209, 224, 0.2);
 }
 
 .static-white-text h3 {
-  font-size: 1.8rem; /* Slightly smaller than h2 */
-  margin-bottom: 5px; /* Reduced space below the heading */
-  margin-top: 10px; /* Reduced space above the heading */
-  color: #00ff00; /* Neon green for eye-catching contrast */
-  text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); /* Add a neon glow effect */
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: #00ff00;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
 .static-white-text p {
-  font-size: 1.2rem; /* Smallest but still readable */
-  margin-bottom: 10px; /* Increased spacing between paragraphs */
-  color: #e0e0e0; /* White color for paragraphs to match overall theme */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #e0e0e0;
 }
 
 .static-white-text a {
-  color: #00d1e0; /* Electric blue for links to match the navbar */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold weight for links for emphasis */
+  color: #00d1e0; 
+  text-decoration: none; 
+  font-weight: bold; 
 }
 
 .static-white-text a:hover {
-  color: #ff007f; /* Neon pink on hover for contrast */
-  text-decoration: underline; /* Add underline on hover for emphasis */
+  color: #ff007f; 
+  text-decoration: underline;
 }
 
+/* -- CONTACT PAGE TEXT SETUP -- */
+/*Very similar setup to static-white-text*/
 .static-white-text-left {
-  color: #e0e0e0; /* White color for text */
+  color: #e0e0e0;
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -228,7 +230,7 @@ body {
   max-width: 800px;
   position: relative;
   z-index: 1;
-  text-align: left; /* Left-align text */
+  text-align: left;
 }
 
 .static-white-text-left::before {
@@ -242,82 +244,77 @@ body {
   z-index: -1;
 }
 .static-white-text-left h1 {
-  font-size: 2rem; /* Adjusted font size for balance */
-  margin-bottom: 20px; /* Space below the heading */
-  color: #fff; /* Ensure heading color contrasts well with the background */
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+  color: #fff; 
 }
 
 .static-white-text-left h2 {
-  font-size: 1.5rem; /* Adjusted font size for balance */
-  margin-bottom: 5px; /* Space below the heading */
-  color: #fff; /* Ensure heading color contrasts well with the background */
+  font-size: 1.5rem; 
+  margin-bottom: 5px; 
+  color: #fff; 
 }
 
 .static-white-text-left p {
-  margin-bottom: 10px; /* Increased spacing between paragraphs */
-  color: #e0e0e0; /* White color for paragraphs to match overall theme */
+  margin-bottom: 10px; 
+  color: #e0e0e0; 
 }
 
 .static-white-text-left a {
-  color: #00d1e0; /* Electric blue for links to match the navbar */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold weight for links for emphasis */
+  color: #00d1e0; 
+  text-decoration: none; 
+  font-weight: bold; 
 }
 
 .static-white-text-left a:hover {
-  color: #ff007f; /* Neon pink on hover for contrast */
-  text-decoration: underline; /* Add underline on hover for emphasis */
+  color: #ff007f;
+  text-decoration: underline;
 }
 
-/* Home container styling */
+/* -- HOMEPAGE REVISION STYLING SETUP -- */
 .home-container {
-  margin: 0; /* Remove all margins */
-  padding: 0; /* Remove all padding */
-  /*display: static;
-  overflow: auto;*/
+  margin: 0;
+  padding: 0;
   display: flex;
   overflow: hidden;
 }
 
-/* Intro section styling */
 .home-container .intro-section {
-  display: flex; /* Use flexbox layout */
-  justify-content: space-between; /* Space between text and image */
-  align-items: flex-start; /* Align items at the start */
-  max-width: 100%; /* Full width */
-  margin: 0 auto; /* Center the section */
-  padding: 0; /* Remove padding for spacing */
-  flex-wrap: nowrap; /* No wrapping to keep columns side by side */
-
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  max-width: 100%;
+  margin: 0 auto; 
+  padding: 0;
+  flex-wrap: nowrap;
   width: 100vw;
   height: 100vh;
 }
 
-/* Intro text styling */
 .home-container .intro-text {
-  flex: 2; /* Allow text to take 2/3 of the space */
-  margin: 0; /* Remove all margins */
-  padding: 50px; /* Remove padding */
+  flex: 2; 
+  margin: 0; 
+  padding: 50px; 
   margin-top: 150px;
   overflow: hidden;
 }
 
-/* Intro text heading styling */
+
 .home-container .intro-text h1 {
-  font-size: 6rem; /* Adjust font size */
-  color: #fff; /* Text color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional text shadow for better visibility */
-  margin: 0; /* Ensure no margin */
+  font-size: 6rem; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
 }
 
-/* Intro image container */
+
 .home-container .intro-image {
-  flex: 1; /* Fixed width for the image container (1/3 of the space) */
-  display: flex; /* Use flexbox for the image container */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-  margin: 0; /* Remove all margins */
-  padding: 0; /* Remove all padding */
+  flex: 1; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0; 
+  padding: 0; 
   overflow:auto;
   height: 100vh;
 
@@ -326,8 +323,86 @@ body {
 /* Right-centered image */
 .home-container .right-centered-img {
   width: 100%;
-  max-width: none; /* Ensure image doesn't exceed its container */
-  /*height: center; /* Maintain aspect ratio */
+  max-width: none; 
   height: 100%;
   object-fit: cover;
 }
+
+/* -- PROJECT PAGE TEMPLATE SETUP -- */
+.project-page {
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.project-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: -1;
+}
+
+.project-title {
+  font-size: 3rem;
+  margin: 0;
+  color: #fff;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  color: #00d1e0;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.project-links a:hover {
+  color: #ff007f;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px 0;
+  background: #000;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-summary {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .project-page {
+    text-align: center;
+  }
+}
+

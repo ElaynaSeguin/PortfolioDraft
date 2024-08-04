@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       "Hi, I'm Elayna. Welcome to my portfolio.",
       "I am a recent graduate from San Jose State.",
       "Incoming EE masters student at Santa Clara University.",
-      "Click the dropdown above to learn more about me."
+      "Explore the menu above to learn more about me."
   ];
 
   var index = 0;
